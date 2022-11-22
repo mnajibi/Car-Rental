@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Your Receipt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <!-- <strong>Peter's Car Rental Form</strong> -->
+    <h1>Reservation Confirmed!</h1>
+    <Label><b>Reservation Number: </b> <ion-text color="tertiary"> Res-{{ reservationID }} </ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Car Type: </b><ion-text color="tertiary">{{ reservation.typeCar }}</ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Length of Rental: </b><ion-text color="tertiary">{{ days }} days and {{ hours }} hours</ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Pickup Date </b> <ion-text color="tertiary">{{ reservation.resDate }}</ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Car Seat Required? </b> <ion-text color="tertiary">{{ YesOrNo }}</ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Subtotal: </b><ion-text color="tertiary">${{ Subtotal }}</ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Tax: </b><ion-text color="tertiary">${{ SalesTax }}</ion-text></Label>
+    <br>
+    <br>
+    <Label><b>Total: </b><ion-text color="tertiary">${{ total }}</ion-text></Label>
+    <br>
+
+
+  </div>
+</ion-content>

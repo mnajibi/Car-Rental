@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Create Your Reservation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"> Maryam's Car Rental App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <!-- <strong>Peter's Car Rental Form</strong> -->
+    <h1>Peter's Car Rental Form</h1>
+    <div id="error">
+      <p *ngIf = "!(typeCar === 'Sedan' || typeCar === 'SUV') || currentDate > resDate || 1 > numOfDays || numOfDays > 96">Please fix these issues with your form</p>
+     <ul>
+      <li *ngIf = "!(typeCar === 'Sedan' || typeCar === 'SUV')">Car Type: You must select a car type</li>
+      <li *ngIf = "currentDate > resDate ">Reservation Date: Date must be today or in the future</li>
+      <li *ngIf = "1 > numOfDays  || numOfDays > 96">Hours: You must enter a value between 1-96</li>
+     </ul>
+    </div>
+    <Label>What type of car?</Label>
+    <br>
+
+    <p> new date {{currentDate}}</p>
+
+    <br>
+    <p> resDate {{resDate}} </p>
+    <br>
+    <!-- <p> Differene {{resDate.getDate() < currentDate.getTime() }} </p> -->
+
+    <select id="dMenu" required [(ngModel)] ="typeCar">
+      <option>Sedan</option>
+      <option>SUV</option>
+    </select>
+    <br>
+    <br>
+    <Label>Enter the reservation date: </Label>
+    <br>
+    <input type="date" [(ngModel)] ="resDate" required >
+    <br>
+      <Label>Enter the number of hours: </Label>
+    <br>
+    <input type="number" min="1" max="96" [(ngModel)] ="numOfDays" required>
+
+    <br>
+    <br>
+    <Label>Do you need a car seat? </Label>
+    <input type="checkbox" [(ngModel)] ="carSeat" required>
+    <br>
+    <br>
+    <button id="subBut" (click)="reservePressed()">RESERVE</button>
+    &nbsp;
+    <button id="resBut" (click)="resetPressed()">RESET</button>
+
+
+  </div>
+</ion-content>
