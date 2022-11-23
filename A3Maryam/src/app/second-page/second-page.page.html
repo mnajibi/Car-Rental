@@ -10,30 +10,47 @@
 <ion-content>
   <div id="container">
     <!-- <strong>Peter's Car Rental Form</strong> -->
-    <h1>Reservation Confirmed!</h1>
-    <Label><b>Reservation Number: </b> <ion-text color="tertiary"> Res-{{ reservationID }} </ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Car Type: </b><ion-text color="tertiary">{{ reservation.typeCar }}</ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Length of Rental: </b><ion-text color="tertiary">{{ days }} days and {{ hours }} hours</ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Pickup Date </b> <ion-text color="tertiary">{{ reservation.resDate }}</ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Car Seat Required? </b> <ion-text color="tertiary">{{ YesOrNo }}</ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Subtotal: </b><ion-text color="tertiary">${{ Subtotal }}</ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Tax: </b><ion-text color="tertiary">${{ SalesTax }}</ion-text></Label>
-    <br>
-    <br>
-    <Label><b>Total: </b><ion-text color="tertiary">${{ total }}</ion-text></Label>
-    <br>
+    <ion-item lines="none">
+      <h1>Reservation Confirmed!</h1>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label><b>Reservation Number: </b> <ion-text color="tertiary"> Res-{{ reservationID }} </ion-text></ion-label>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <b>Car Type: </b><ion-text color="tertiary"> {{ reservation.typeCar }}</ion-text>
+    </ion-item>
+
+    <ion-item lines="none">
+      <b>Length of Rental: </b><ion-text color="tertiary"> {{ days }} days and {{ hours }} hours</ion-text>
+    </ion-item>
+
+    <ion-item lines="none">
+      <b>Pickup Date </b> <ion-text color="tertiary"> {{ reservation.resDate }}</ion-text>
+    </ion-item>
+
+
+    <ion-item lines="none">
+      <b>Car Seat Required? </b> <ion-text color="tertiary"> {{ YesOrNo }}</ion-text>
+    </ion-item>
+
+
+
+    <ion-item lines="none">
+      <b>Subtotal: </b><ion-text color="tertiary"> ${{ Subtotal }}</ion-text>
+    </ion-item>
+
+
+
+
+    <ion-item lines="none">
+      <b>Tax: </b><ion-text color="tertiary"> ${{ SalesTax }}</ion-text>
+    </ion-item>
+
+    <ion-item lines="none">
+      <b>Total: </b><ion-text color="tertiary"> ${{ total }}</ion-text>
+    </ion-item>
 
 
   </div>

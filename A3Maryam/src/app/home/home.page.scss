@@ -1,12 +1,17 @@
 #container {
-
-
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
+ion-title {
+  font-size: 33px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+
 
 #container strong {
   font-size: 20px;
@@ -42,15 +47,7 @@
   position: absolute;
 }
 
-#subBut
+#btn
 {
-  background-color: royalblue;
-  color: white;
-  padding: 15px 25px;
-  font-size: large;
-}
-#resBut
-{
-  padding: 15px 25px;
-  font-size: large;
+text-align: center;
 }
